@@ -15,7 +15,7 @@ void collectInput(string answer[]) {
     cout << "Do you prefer day or night? ";
     cin >> answer[0];
 
-    while (answer[0] != "day" && answer[0] != "night") {
+    while (answer[0] != "day" && answer[0] != "night") { 
         cout << "Invalid Input. Please enter day or night: ";
         cin >> answer[0];
     }
