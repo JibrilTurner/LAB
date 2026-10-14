@@ -66,17 +66,16 @@ int main(){
         pastryPrice,
         coffees,
         pastries
-    ;
-
+    );
 
     cout << fixed << setprecision(2);
     printReceiptHeader(name);
     printItem("Coffees",  coffees,  coffeePrice, r.coffee);
     printItem("Pastries", pastries, pastryPrice, r.pastry);
-    printSeparator();
-    printTotal("Subtotal", r.subtota\n);
+rintSeparator();
+    printTotal("Subtotal", r.subtotal);
     cout << endl;
-    printTotal("Tax (8.25%)", r.tax);
+    printTotal("Tax (8.25%)", rax);
     cout << endl;
     printTotal("Total", r.total);
     return 0;
