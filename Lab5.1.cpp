@@ -9,44 +9,74 @@ using namespace std;
 #include <cstring>
 
 
-void func(string motivation_to_work) {
-    int current_time = 550;
-    int alarm_time = 600;
-    bool is_alarm_going_off = false; 
+int INDEX; 
+void amIGreatThanNine(int arr[], int INDEX) {
+    if (arr[INDEX] > 9) {
+        cout << "true";
+    } else {
+        cout << "false";
+    }
+}
 
-    while (current_time < 800) {
-        printf("Current Time: %d\n", current_time);
-        if (current_time >= 750) { 
-            motivation_to_work = "panicMade";
-            printf("Panic mode is true\nJump out of bed\nPut on clean shirt\n");
-            break;
-        }
-        if (current_time == alarm_time) {
-            is_alarm_going_off = true;
-        }
-        if (is_alarm_going_off) {
-            printf("Groan loudly \n");
-            if (motivation_to_work == "high") {
-                printf("Hit the off button\nGet out of bed\nget ready\n");
-                break;
-            }
-            else {
-                printf("Hit snooze button\n");
-                is_alarm_going_off = false;
-                alarm_time = alarm_time + 10;
-            }
-        }
-        current_time = current_time + 10;
+void displayArray(int arr[], int SIZE) {
+    for (int INDEX = 0; INDEX < SIZE; INDEX++) {
+        cout << arr[INDEX] << " ";
+        amIGreatThanNine(arr, INDEX);
     }
 }
 
 int main() {
-    string inputOfFunc;
-    printf("What is your motivation to work (low, med, high)? ");
-    cin >> inputOfFunc;
-    func(inputOfFunc);
+    const int SIZE = 35;
+    int arr[SIZE];
+    for (int i = 0; i < SIZE; i++) {
+        cin >> arr[i];
+    }
+
+    displayArray(arr, SIZE);
+
     return 0;
 }
+
+
+
+// void func(string motivation_to_work) {
+//     int current_time = 550;
+//     int alarm_time = 600;
+//     bool is_alarm_going_off = false; 
+
+//     while (current_time < 800) {
+//         printf("Current Time: %d\n", current_time);
+//         if (current_time >= 750) { 
+//             motivation_to_work = "panicMade";
+//             printf("Panic mode is true\nJump out of bed\nPut on clean shirt\n");
+//             break;
+//         }
+//         if (current_time == alarm_time) {
+//             is_alarm_going_off = true;
+//         }
+//         if (is_alarm_going_off) {
+//             printf("Groan loudly \n");
+//             if (motivation_to_work == "high") {
+//                 printf("Hit the off button\nGet out of bed\nget ready\n");
+//                 break;
+//             }
+//             else {
+//                 printf("Hit snooze button\n");
+//                 is_alarm_going_off = false;
+//                 alarm_time = alarm_time + 10;
+//             }
+//         }
+//         current_time = current_time + 10;
+//     }
+// }
+
+// int main() {
+//     string inputOfFunc;
+//     printf("What is your motivation to work (low, med, high)? ");
+//     cin >> inputOfFunc;
+//     func(inputOfFunc);
+//     return 0;
+// }
 
 
 // void func(string motivation_to_work) {
