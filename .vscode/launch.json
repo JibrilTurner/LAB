@@ -1,9 +1,6 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
-    
-
     {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
@@ -11,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/mathe/Desktop/Labs/LAB",
-      "program": "c:/Users/mathe/Desktop/Labs/LAB/build/Debug/outDebug",
+      "cwd": "c:/Users/mathe/LAB",
+      "program": "c:/Users/mathe/LAB/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
